@@ -3,6 +3,39 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "ngx-raptorize": {
+      "projectType": "library",
+      "root": "projects/ngx-raptorize",
+      "sourceRoot": "projects/ngx-raptorize/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-raptorize/tsconfig.lib.json",
+            "project": "projects/ngx-raptorize/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-raptorize/src/test.ts",
+            "tsConfig": "projects/ngx-raptorize/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-raptorize/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-raptorize/tsconfig.lib.json",
+              "projects/ngx-raptorize/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**"]
+          }
+        }
+      }
+    },
     "ngx-raptorize-demo": {
       "projectType": "application",
       "schematics": {

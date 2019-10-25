@@ -1,0 +1,12 @@
+.raptor {
+  height: 0px;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  display: none;
+
+  transition-property: bottom, right;
+  transition-duration: 100ms, 2200ms;
+  transition-delay: 0s, 300ms;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+}

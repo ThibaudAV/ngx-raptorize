@@ -10,6 +10,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
+    "build:ngx-raptorize": "ng build ngx-raptorize && cp -R projects/ngx-raptorize/src/assets/ dist/ngx-raptorize/assets/",
     "test": "ng test",
     "lint": "yarn lint:commit && yarn ng lint && yarn lint:prettier",
     "lint:commit": "commitlint --from=$( git rev-list --tags --max-count=1 )",
