@@ -1,0 +1,23 @@
+language: node_js
+dist: trusty
+sudo: required
+node_js: node
+
+install:
+  - yarn
+cache: yarn
+script:
+  - yarn lint
+  - yarn build:ngx-raptorize && yarn build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: dist/ngx-raptorize-demo
+  on:
+    branch: master
+
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

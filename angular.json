@@ -91,7 +91,9 @@
                   "maximumWarning": "6kb",
                   "maximumError": "10kb"
                 }
-              ]
+              ],
+              "baseHref": "/ngx-raptorize/",
+              "deployUrl": "/ngx-raptorize/"
             }
           }
         },

@@ -9,13 +9,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build -c production",
     "build:ngx-raptorize": "ng build ngx-raptorize && cp -R projects/ngx-raptorize/src/assets/ dist/ngx-raptorize/assets/",
     "test": "ng test",
     "lint": "yarn lint:commit && yarn ng lint && yarn lint:prettier",
     "lint:commit": "commitlint --from=$( git rev-list --tags --max-count=1 )",
     "lint:prettier": "yarn prettier -l '**/*.{ts,js,scss,md,json}'",
-    "lint:prettier:fix": "yarn prettier --write '**/*.{ts,js,scss,md,json}'"
+    "lint:prettier:fix": "yarn prettier --write '**/*.{ts,js,scss,md,json}'",
+    "semantic-release": "semantic-release"
   },
   "prettier": {
     "printWidth": 80,
