@@ -24,6 +24,8 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_PAT }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: dist/ngx-raptorize-demo
+      - name: Copy README.md & LICENSE in lib
+        run: cp {README.md,LICENSE} dist/ngx-raptorize
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_PAT }}
