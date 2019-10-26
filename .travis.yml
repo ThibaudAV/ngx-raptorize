@@ -9,14 +9,13 @@ cache: yarn
 script:
   - yarn lint
   - yarn build:ngx-raptorize && yarn build
-
-deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN
-  local-dir: dist/ngx-raptorize-demo
-  on:
-    branch: master
+# deploy:
+#   provider: pages
+#   skip-cleanup: true
+#   github-token: $GITHUB_TOKEN
+#   local-dir: dist/ngx-raptorize-demo
+#   on:
+#     branch: master
 
 branches:
   only:
