@@ -1,6 +1,6 @@
 {
   "name": "ngx-raptorize",
-  "version": "0.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "An awesome ngx library that unleashes a Raptor of Jurassic proportions... Well, technically it's Cretaceous proportions, but we'll let that slide for now.",
   "repository": "https://github.com/ThibaudAV/ngx-raptorize",
   "author": "ThibaudAv",
@@ -37,6 +37,9 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "yarn lint"
     }
+  },
+  "release": {
+    "pkgRoot": "dist/ngx-raptorize"
   },
   "dependencies": {
     "@angular/animations": "~8.2.11",

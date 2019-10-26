@@ -1,4 +1,7 @@
-# MyWorkspace
+# ngx-raptorize
+
+![Travis (.org)](https://img.shields.io/travis/ThibaudAv/ngx-raptorize)
+![npm](https://img.shields.io/npm/v/ngx-raptorize)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.10.
 

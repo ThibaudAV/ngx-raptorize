@@ -16,8 +16,16 @@ jobs:
           node-version: 12
       - name: Install dependencies
         run: yarn
+      - name: Build
+        run: yarn build:ngx-raptorize && yarn build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          PERSONAL_TOKEN: ${{ secrets.GITHUB_PAT }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: dist/ngx-raptorize-demo
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_PAT }}
           NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-        run: npx semantic-release
+        run: yarn semantic-release
