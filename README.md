@@ -11,7 +11,7 @@ Angular2+ representation of the Raptorize plugin like :
 
 The goal is a small old scool easter eggs 🥚. And for me to make a small public angular lib 😉
 
-## Install
+## 📦 Install
 
 `yarn add ngx-raptorize`
 
