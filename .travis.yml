@@ -19,5 +19,5 @@ deploy:
     branch: master
 
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - 'master'
