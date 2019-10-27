@@ -1,4 +1,4 @@
-# ngx-raptorize
+# 👋 ngx-raptorize
 
 ![Travis (.org)](https://img.shields.io/travis/ThibaudAv/ngx-raptorize)
 ![npm](https://img.shields.io/npm/v/ngx-raptorize)
@@ -15,14 +15,19 @@ Demo : https://thibaudav.github.io/ngx-raptorize/
 
 ## 📦 Install
 
-`yarn add ngx-raptorize`
+`yarn add ngx-raptorize` or `npm install ngx-raptorize`
 
 No dependencies (besides Angular2+) are required.
+Should work on all recent browsers.
 
-## Use
+## 🏄 Use
 
 Add `<ngx-raptorize></ngx-raptorize>` in your main app component or elsewhere.
 Import module
+
+### ➡️ With assets in src in base64
+
+The simplest... but maybe not the most efficient
 
 ```
 import { NgxRaptorizeModule } from 'ngx-raptorize';
@@ -35,13 +40,87 @@ import { NgxRaptorizeModule } from 'ngx-raptorize';
     NgxRaptorizeModule,
     ...
   ],
-  bootstrap: [AppComponent],
-  declarations: [AppComponent],
+  ...
 })
 export class AppModule {}
 ```
 
-## Development server
+### ➡️ With custom assets url
+
+```
+import { NgxRaptorizeModule } from 'ngx-raptorize';
+
+...
+
+@NgModule({
+  imports: [
+    ...
+    NgxRaptorizeModule.withAssets({
+      raptorImgSrc: 'https://zurb.com/playground/uploads/upload/upload/224/raptor.png',
+      raptorSoundSrc: 'https://zurb.com/playground/raptor-sound.ogg',
+    }),
+    ...
+  ],
+  ...
+})
+export class AppModule {}
+```
+
+### ➡️ With lib assets
+
+Refer the assets folder of the lib in angular.json.
+
+Like :
+
+```
+{
+  ...
+  "projects": {
+    "ngx-raptorize-demo": {
+      ...
+      "architect": {
+        "build": {
+          ...
+          "options": {
+            ...
+            "assets": [
+              "projects/ngx-raptorize-demo/src/favicon.ico",
+              "projects/ngx-raptorize-demo/src/assets",
+              ...
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ngx-raptorize/assets/",
+                "output": "./assets/"
+              }
+            ],
+          }
+        }
+      }
+    }
+  }
+}
+```
+
+```
+import { NgxRaptorizeModule } from 'ngx-raptorize';
+
+...
+
+@NgModule({
+  imports: [
+    ...
+    NgxRaptorizeModule.withAssets({
+      raptorImgSrc: 'assets/raptor.png',
+      raptorSoundSrc: 'assets/raptor-sound.ogg',
+    }),
+    ...
+  ],
+  ...
+})
+export class AppModule {}
+```
+
+## 🕵 Development server
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 

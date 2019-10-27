@@ -58,7 +58,12 @@
             "aot": false,
             "assets": [
               "projects/ngx-raptorize-demo/src/favicon.ico",
-              "projects/ngx-raptorize-demo/src/assets"
+              "projects/ngx-raptorize-demo/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/ngx-raptorize/assets/",
+                "output": "./assets/"
+              }
             ],
             "styles": ["projects/ngx-raptorize-demo/src/styles.scss"],
             "scripts": []

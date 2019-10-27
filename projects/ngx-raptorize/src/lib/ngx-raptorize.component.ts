@@ -1,6 +1,14 @@
-import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-import { raptorBase64 } from '../assets/raptor-base64';
-import { raptorSoundMP3Base64 } from '../assets/raptor-sound-mp3-base64';
+import {
+  Component,
+  ViewChild,
+  ElementRef,
+  Renderer2,
+  Inject,
+} from '@angular/core';
+import {
+  NGX_RAPTORIZE_CONFIG,
+  NgxRaptorizeConfig,
+} from './ngx-raptorize.token';
 
 @Component({
   selector: 'ngx-raptorize',
@@ -10,7 +18,7 @@ import { raptorSoundMP3Base64 } from '../assets/raptor-sound-mp3-base64';
       ngxKonamiCode
       (konami)="run()"
       class="raptor"
-      src="{{ raptorBase64 }}"
+      src="{{ raptorizeConfig.raptorImgSrc }}"
     />
   `,
   styles: [
@@ -38,25 +46,25 @@ import { raptorSoundMP3Base64 } from '../assets/raptor-sound-mp3-base64';
   ],
 })
 export class NgxRaptorizeComponent {
-  raptorBase64 = raptorBase64;
-  raptorSoundMP3Base64 = raptorSoundMP3Base64;
-
   @ViewChild('raptor', { static: false })
   raptor: ElementRef;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(
+    @Inject(NGX_RAPTORIZE_CONFIG) public raptorizeConfig: NgxRaptorizeConfig,
+    private renderer: Renderer2,
+  ) {}
 
   run() {
     this.renderer.addClass(this.raptor.nativeElement, 'show');
-    this.playAudio();
+    this.playAudio(this.raptorizeConfig.raptorSoundSrc);
     setTimeout(() => {
       this.renderer.removeClass(this.raptor.nativeElement, 'show');
     }, 2500);
   }
 
-  private playAudio() {
+  private playAudio(src: string) {
     const audio = new Audio();
-    audio.src = raptorSoundMP3Base64;
+    audio.src = src;
     audio.load();
     audio.play();
   }
