@@ -24,8 +24,14 @@ import { raptorBase64 } from '../assets/raptor-base64';
       .raptor.show {
         right: 100%;
         bottom: -100px;
-        transition: right 2000ms cubic-bezier(0.42, 0, 0.58, 1),
-          bottom 1000ms cubic-bezier(0.42, 0, 0.58, 1) 300ms;
+        -webkit-transition: right 2200ms cubic-bezier(0.42, 0, 0.58, 1) 400ms,
+          bottom 1000ms cubic-bezier(0.42, 0, 0.58, 1) 800ms;
+        -moz-transition: right 2200ms cubic-bezier(0.42, 0, 0.58, 1) 400ms,
+          bottom 1000ms cubic-bezier(0.42, 0, 0.58, 1) 800ms;
+        -o-transition: right 2200ms cubic-bezier(0.42, 0, 0.58, 1) 400ms,
+          bottom 1000ms cubic-bezier(0.42, 0, 0.58, 1) 800ms;
+        transition: right 2200ms cubic-bezier(0.42, 0, 0.58, 1) 400ms,
+          bottom 1000ms cubic-bezier(0.42, 0, 0.58, 1) 800ms;
       }
     `,
   ],
@@ -42,6 +48,6 @@ export class NgxRaptorizeComponent {
     this.renderer.addClass(this.raptor.nativeElement, 'show');
     setTimeout(() => {
       this.renderer.removeClass(this.raptor.nativeElement, 'show');
-    }, 2000);
+    }, 2500);
   }
 }
