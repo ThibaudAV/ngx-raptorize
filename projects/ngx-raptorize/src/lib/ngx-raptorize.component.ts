@@ -24,6 +24,7 @@ import {
   styles: [
     `
       .raptor {
+        z-index: 666666666;
         position: fixed;
         right: -400px;
         bottom: -280px;
