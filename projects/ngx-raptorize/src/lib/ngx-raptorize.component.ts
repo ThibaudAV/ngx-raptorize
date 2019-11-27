@@ -53,9 +53,7 @@ export class NgxRaptorizeComponent {
   constructor(
     @Inject(NGX_RAPTORIZE_CONFIG) public raptorizeConfig: NgxRaptorizeConfig,
     private renderer: Renderer2,
-  ) {
-    console.log(this.raptorizeConfig);
-  }
+  ) {}
 
   run() {
     this.renderer.addClass(this.raptor.nativeElement, 'show');
