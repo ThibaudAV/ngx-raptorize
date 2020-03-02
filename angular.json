@@ -14,6 +14,11 @@
           "options": {
             "tsConfig": "projects/ngx-raptorize/tsconfig.lib.json",
             "project": "projects/ngx-raptorize/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-raptorize/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
@@ -55,7 +60,7 @@
             "main": "projects/ngx-raptorize-demo/src/main.ts",
             "polyfills": "projects/ngx-raptorize-demo/src/polyfills.ts",
             "tsConfig": "projects/ngx-raptorize-demo/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/ngx-raptorize-demo/src/favicon.ico",
               "projects/ngx-raptorize-demo/src/assets",
@@ -81,7 +86,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,

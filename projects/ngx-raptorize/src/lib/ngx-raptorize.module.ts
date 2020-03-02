@@ -22,7 +22,9 @@ import { raptorSoundMP3Base64 } from './assets-base64/raptor-sound-mp3-base64';
   ],
 })
 export class NgxRaptorizeModule {
-  static withAssets(raptorizeConfig: NgxRaptorizeConfig): ModuleWithProviders {
+  static withAssets(
+    raptorizeConfig: NgxRaptorizeConfig,
+  ): ModuleWithProviders<NgxRaptorizeModule> {
     return {
       ngModule: NgxRaptorizeModule,
       providers: [
