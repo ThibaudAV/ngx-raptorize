@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NgxRaptorizeComponent } from './ngx-raptorize.component';
+import { NGX_RAPTORIZE_CONFIG } from './ngx-raptorize.token';
 
 describe('NgxRaptorizeComponent', () => {
   let component: NgxRaptorizeComponent;
@@ -9,6 +10,15 @@ describe('NgxRaptorizeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [NgxRaptorizeComponent],
+      providers: [
+        {
+          provide: NGX_RAPTORIZE_CONFIG,
+          useValue: {
+            raptorImgSrc: '',
+            raptorSoundSrc: '',
+          },
+        },
+      ],
     }).compileComponents();
   }));
 
