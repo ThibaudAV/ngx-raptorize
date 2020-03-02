@@ -18,7 +18,7 @@ export class KonamiCodeDirective {
   ];
 
   @Output()
-  private konami: EventEmitter<void> = new EventEmitter<void>();
+  public konami: EventEmitter<void> = new EventEmitter<void>();
 
   private sequence: string[] = [];
 
