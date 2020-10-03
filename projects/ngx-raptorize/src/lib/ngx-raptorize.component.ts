@@ -48,7 +48,7 @@ import {
 })
 export class NgxRaptorizeComponent {
   @ViewChild('raptor')
-  raptor: ElementRef;
+  raptor!: ElementRef;
 
   constructor(
     @Inject(NGX_RAPTORIZE_CONFIG) public raptorizeConfig: NgxRaptorizeConfig,
