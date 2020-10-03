@@ -10,9 +10,7 @@ const bKey = new KeyboardEvent('keydown', { key: 'b' });
 const aKey = new KeyboardEvent('keydown', { key: 'a' });
 
 @Component({
-  template: `
-    <div class="some-div" ngxKonamiCode (konami)="sayOk()"></div>
-  `,
+  template: ` <div class="some-div" ngxKonamiCode (konami)="sayOk()"></div> `,
 })
 class TestComponent {
   sayOk() {
