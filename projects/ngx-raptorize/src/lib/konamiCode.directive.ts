@@ -24,6 +24,9 @@ export class KonamiCodeDirective {
 
   @HostListener('document:keydown', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
+    if (!event.key) {
+      return;
+    }
     const key = event.key.toString();
 
     if (key) {

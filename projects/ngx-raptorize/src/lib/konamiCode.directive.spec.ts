@@ -36,6 +36,10 @@ describe('KonamiCodeDirective', () => {
     fixture.detectChanges();
   });
 
+  it('should do nothing if the event has no key', () => {
+    document.dispatchEvent(new Event('keydown'));
+  });
+
   describe('when proper sequence is entered', () => {
     it('should trigger konami event', () => {
       document.dispatchEvent(upArrow);
