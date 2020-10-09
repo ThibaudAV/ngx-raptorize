@@ -1,4 +1,4 @@
-# 👋 ngx-raptorize
+# 🦖 ngx-raptorize
 
 ![Travis (.org)](https://img.shields.io/travis/ThibaudAv/ngx-raptorize)
 ![npm](https://img.shields.io/npm/v/ngx-raptorize)
@@ -9,7 +9,7 @@ Angular2+ representation of the Raptorize plugin like :
 - http://zurb.com/playground/jquery-raptorize
 - https://github.com/WyattNielsen/ngRaptorize
 
-The goal is a small old scool easter eggs 🥚. And for me to make a small public angular lib 😉
+The goal is a small old school easter eggs 🥚 🦖. And for me to make a small public angular lib 😉
 
 Demo : https://thibaudav.github.io/ngx-raptorize/
 
