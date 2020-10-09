@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# Bit
+/components
+.bitmap
+projects/ngx-raptorize/src/lib/package.json
