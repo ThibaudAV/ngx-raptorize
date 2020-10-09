@@ -51,8 +51,9 @@ export class NgxRaptorizeComponent {
   raptor!: ElementRef;
 
   constructor(
-    @Inject(NGX_RAPTORIZE_CONFIG) public raptorizeConfig: NgxRaptorizeConfig,
-    private renderer: Renderer2,
+    @Inject(NGX_RAPTORIZE_CONFIG)
+    public readonly raptorizeConfig: NgxRaptorizeConfig,
+    private readonly renderer: Renderer2,
   ) {}
 
   run() {
