@@ -30,7 +30,12 @@ Import module
 The simplest... but maybe not the most efficient
 
 ```
-import { NgxRaptorizeModule } from 'ngx-raptorize';
+import {
+  NgxRaptorizeModule,
+  NGX_RAPTORIZE_CONFIG,
+  NgxRaptorizeConfig,
+  assetsBase64,
+} from 'ngx-raptorize';
 
 ...
 
@@ -39,6 +44,15 @@ import { NgxRaptorizeModule } from 'ngx-raptorize';
     ...
     NgxRaptorizeModule,
     ...
+  ],
+  providers: [
+    {
+      provide: NGX_RAPTORIZE_CONFIG,
+      useValue: {
+        raptorImgSrc: raptorBase64,
+        raptorSoundSrc: raptorSoundMP3Base64,
+      } as NgxRaptorizeConfig,
+    },
   ],
   ...
 })
