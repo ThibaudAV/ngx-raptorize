@@ -4,9 +4,9 @@ import { NgModule } from '@angular/core';
 import {
   NgxRaptorizeModule,
   NGX_RAPTORIZE_CONFIG,
-  assetsBase64,
   NgxRaptorizeConfig,
 } from 'ngx-raptorize';
+import { assetsBase64 } from 'ngx-raptorize/assets';
 import { AppComponent } from './app.component';
 
 @NgModule({

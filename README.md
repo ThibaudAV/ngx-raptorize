@@ -34,8 +34,8 @@ import {
   NgxRaptorizeModule,
   NGX_RAPTORIZE_CONFIG,
   NgxRaptorizeConfig,
-  assetsBase64,
 } from 'ngx-raptorize';
+import { assetsBase64 } from 'ngx-raptorize/assets';
 
 ...
 
