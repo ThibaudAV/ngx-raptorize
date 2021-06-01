@@ -1,5 +1,25 @@
 {
-  "extends": [
-    "config:base"
+  "extends": ["config:base"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "matchDepTypes": ["devDependencies"],
+      "matchPackagePatterns": ["lint", "prettier"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "excludePackagePatterns": ["^@angular/.*"],
+      "automerge": true
+    },
+    {
+      "packagePatterns": ["^@angular/.*"],
+      "groupName": "angular",
+      "pinVersions": false
+    }
   ]
 }
