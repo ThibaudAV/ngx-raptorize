@@ -10,7 +10,7 @@
     "access": "public"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
+    "tslib": "2.3.0"
   },
   "peerDependencies": {
     "@angular/core": ">=9.0.0"
