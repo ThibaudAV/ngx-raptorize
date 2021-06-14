@@ -60,7 +60,6 @@
             "main": "projects/ngx-raptorize-demo/src/main.ts",
             "polyfills": "projects/ngx-raptorize-demo/src/polyfills.ts",
             "tsConfig": "projects/ngx-raptorize-demo/tsconfig.app.json",
-            "aot": true,
             "assets": [
               "projects/ngx-raptorize-demo/src/favicon.ico",
               "projects/ngx-raptorize-demo/src/assets",
@@ -71,7 +70,13 @@
               }
             ],
             "styles": ["projects/ngx-raptorize-demo/src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -103,7 +108,8 @@
               "baseHref": "/ngx-raptorize/",
               "deployUrl": "/ngx-raptorize/"
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
