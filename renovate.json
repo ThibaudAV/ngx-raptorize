@@ -20,6 +20,11 @@
       "packagePatterns": ["^@angular/.*"],
       "groupName": "angular",
       "pinVersions": false
+    },
+    {
+      "packageNames": ["typescript"],
+      "updateTypes": ["minor", "major"],
+      "enabled": false
     }
   ]
 }
