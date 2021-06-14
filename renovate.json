@@ -26,5 +26,8 @@
       "updateTypes": ["minor", "major"],
       "enabled": false
     }
-  ]
+  ],
+  "nvm": {
+    "enabled": false
+  }
 }
